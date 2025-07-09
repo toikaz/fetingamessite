@@ -1,11 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Fetingames</title>
+<title>Fetingames - The Main</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+  }
+
+  /* Заголовок */
+  header {
+    text-align: center;
+    padding: 40px 20px 10px 20px;
+  }
+
+  h1 {
+    font-size: 48px;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+
+  /* Черточка */
+  hr {
+    width: 80px;
+    border: 2px solid #ffffff;
+    margin: 10px auto;
+    border-radius: 2px;
+  }
+
+  /* Название игры */
+  h2 {
+    font-size: 24px;
+    margin: 10px 0 30px 0;
+    font-weight: normal;
+  }
+
+  /* Основной блок */
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Рекомендуемая установка + скриншоты */
+  .install {
+    flex: 1 1 60%;
+    padding: 20px;
+  }
+
+  .install h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+
+  /* Список рекомендаций */
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+  }
+
+  /* Скриншоты */
+  .screenshots {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .screenshots img {
+    width: 150px;
+    height: auto;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .screenshots img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #fff;
+  }
+
+  /* Скриншот в полном размере при клике (опционально) */
+  /* Можно добавлять по желанию */
+
+  /* Блок скачивания */
+  .download {
+    flex: 1 1 35%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .download a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff4b2b;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+
+  .download a:hover {
+    background-color: #ff3a1f;
+  }
+
+  /* Адаптивность */
+  @media(max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+    .install, .download {
+      flex: 1 1 100%;
+    }
+  }
+</style>
 </head>
 <body>
-<h1>test</h1>
+
+<header>
+  <h1>Fetingames</h1>
+  <hr />
+  <h2>The Main</h2>
+</header>
+
+<div class="content">
+  <!-- Блок с рекомендациями и скриншотами -->
+  <div class="install">
+    <h3>Рекомендуется установить</h3>
+    <ul>
+      <li>Загрузите игру с официального сайта</li>
+      <li>Следуйте инструкциям по установке</li>
+      <li>Запустите игру и наслаждайтесь</li>
+    </ul>
+    <div class="screenshots">
+      <img src="https://via.placeholder.com/150?text=Screenshot+1" alt="Скриншот 1" />
+      <img src="https://via.placeholder.com/150?text=Screenshot+2" alt="Скриншот 2" />
+      <img src="https://via.placeholder.com/150?text=Screenshot+3" alt="Скриншот 3" />
+    </div>
+  </div>
+  <!-- Блок с ссылкой на скачивание -->
+  <div class="download">
+    <a href="https://example.com/download" target="_blank">Скачать игру</a>
+  </div>
+</div>
+
 </body>
 </html>
