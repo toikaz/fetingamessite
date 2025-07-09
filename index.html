@@ -5,18 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Fetingames - The Main</title>
 <style>
+  /* Фон из картинки игры */
   body {
     margin: 0;
     padding: 0;
-    background-color: #121212;
     font-family: 'Arial', sans-serif;
     color: #ffffff;
+    background-image: url('https://images.unsplash.com/photo-1606788075767-8fba0b7f4f8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'); /* замените на свою картинку из игры */
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Полупрозрачное окно */
+  .overlay {
+    background-color: rgba(20, 20, 20, 0.8); /* тёмно-серый прозрачный фон */
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 10px;
   }
 
   /* Заголовок */
   header {
     text-align: center;
-    padding: 40px 20px 10px 20px;
+    padding: 20px 20px 10px 20px;
   }
 
   h1 {
@@ -40,19 +53,19 @@
     font-weight: normal;
   }
 
-  /* Основной блок */
+  /* Основной блок с рекомендациями и скриншотами + кнопкой */
   .content {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+    justify-content: space-between;
   }
 
-  /* Рекомендуемая установка + скриншоты */
+  /* Блок рекомендаций */
   .install {
     flex: 1 1 60%;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
   }
 
   .install h3 {
@@ -91,16 +104,16 @@
     box-shadow: 0 0 10px #fff;
   }
 
-  /* Скриншот в полном размере при клике (опционально) */
-  /* Можно добавлять по желанию */
-
-  /* Блок скачивания */
+  /* Блок с кнопкой скачивания */
   .download {
     flex: 1 1 35%;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    margin-top: 20px;
   }
 
   .download a {
@@ -131,6 +144,7 @@
 </head>
 <body>
 
+<div class="overlay">
 <header>
   <h1>Fetingames</h1>
   <hr />
@@ -156,6 +170,7 @@
   <div class="download">
     <a href="https://example.com/download" target="_blank">Скачать игру</a>
   </div>
+</div>
 </div>
 
 </body>
