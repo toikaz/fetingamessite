@@ -33,35 +33,58 @@
     margin-bottom: 10px;
   }
 
-  /* Навигация с названиями */
-  .nav {
+  /* Верхняя строка: название + ссылка */
+  .title-line {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 30px;
-    margin-top: 10px;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
   }
 
-  /* "The Main" */
-  .nav a {
-    font-size: 22px;
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 6px;
-    background-color: rgba(255,255,255,0.1);
-    transition: background-color 0.3s;
-  }
-
-  .nav a:hover {
-    background-color: rgba(255,255,255,0.3);
-  }
-
-  /* "The Mine" — выделено красным */
-  .the-mine {
-    color: red;
+  /* Название + ссылка */
+  .title-name {
+    font-size: 24px;
     font-weight: bold;
-    border: 2px solid red;
+  }
+
+  /* Кнопка в стиле */
+  .btn {
+    padding: 8px 15px;
+    font-size: 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /* Цвет кнопки - для "The Main" */
+  .btn-main {
+    background-color: rgba(255,255,255,0.2);
+  }
+
+  .btn-main:hover {
+    background-color: rgba(255,255,255,0.4);
+  }
+
+  /* Для "The Mine" — красная кнопка */
+  .btn-mine {
+    background-color: red;
+  }
+
+  .btn-mine:hover {
+    background-color: darkred;
+  }
+
+  /* Линия под названием как у "The Mine" */
+  .line {
+    margin: 10px auto;
+    width: 100px;
+    height: 4px;
+    background-color: red; /* или другой цвет, если нужно */
+    border-radius: 2px;
   }
 
   /* Заголовок под навигацией */
@@ -72,7 +95,7 @@
     margin-bottom: 10px;
   }
 
-  /* Кнопка загрузки */
+  /* Кнопка скачать */
   .download-btn {
     display: block;
     width: fit-content;
@@ -99,10 +122,20 @@
 
 <div class="overlay">
   <h1>Fetingames</h1>
-  <div class="nav">
-    <a href="themain.html">The Main</a>
-    <a href="themine.html" class="the-mine">The Mine</a>
+  
+  <!-- Верхняя строка: название + ссылка -->
+  <div class="title-line">
+    <div class="title-name">Главная</div>
+    <a href="themain.html" class="btn btn-main">The Main</a>
   </div>
+  <div class="line"></div>
+
+  <div class="title-line">
+    <div class="title-name">The Mine</div>
+    <a href="themine.html" class="btn btn-mine">The Mine</a>
+  </div>
+  <div class="line"></div>
+
   <h2>Кликер - Скачать игру</h2>
   <div class="download-btn">
     <a href="https://example.com/download" target="_blank">Скачать Кликер</a>
