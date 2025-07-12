@@ -3,87 +3,111 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Кликер - The Mine</title>
+<title>Fetingames - Кликер</title>
 <style>
-  /* Общий стиль страницы */
   body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #111;
+    background-image: url('https://images.unsplash.com/photo-1606788075767-8fba0b7f4f8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'); /* замените на свою картинку */
+    background-size: cover;
+    background-position: center;
     color: #fff;
+  }
+
+  /* Полупрозрачное окно */
+  .overlay {
+    background-color: rgba(20, 20, 20, 0.8);
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 12px;
+  }
+
+  /* Заголовок сайта */
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  /* Навигация с названиями */
+  .nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    gap: 30px;
+    margin-top: 10px;
   }
 
-  /* Контейнер кликера */
-  .container {
-    background: rgba(20, 20, 20, 0.9);
-    padding: 40px;
-    border-radius: 15px;
-    text-align: center;
-    max-width: 500px;
-    width: 90%;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  }
-
-  /* Заголовок */
-  h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-
-  /* Название "The Mine" — красный цвет */
-  h2 {
-    font-size: 28px;
-    color: red;
-    margin-bottom: 20px;
-  }
-
-  /* Кнопка клика */
-  button {
-    font-size: 24px;
-    padding: 20px 40px;
-    background-color: #ff4b2b;
-    border: none;
-    border-radius: 10px;
+  /* "The Main" */
+  .nav a {
+    font-size: 22px;
     color: #fff;
-    cursor: pointer;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    background-color: rgba(255,255,255,0.1);
     transition: background-color 0.3s;
   }
 
-  button:hover {
-    background-color: #ff3a1f;
+  .nav a:hover {
+    background-color: rgba(255,255,255,0.3);
   }
 
-  /* Показатель количества кликов */
-  .counter {
-    font-size: 30px;
+  /* "The Mine" — выделено красным */
+  .the-mine {
+    color: red;
+    font-weight: bold;
+    border: 2px solid red;
+  }
+
+  /* Заголовок под навигацией */
+  h2 {
+    text-align: center;
+    font-size: 36px;
     margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  /* Кнопка загрузки */
+  .download-btn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0 auto;
+  }
+
+  .download-btn a {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #ff4b2b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+  }
+
+  .download-btn a:hover {
+    background-color: #ff3a1f;
   }
 </style>
 </head>
 <body>
 
-<div class="container">
-  <h1>Кликер</h1>
-  <h2>The Mine</h2>
-  <button id="clickBtn">Кликнуть!</button>
-  <div class="counter" id="counter">0</div>
+<div class="overlay">
+  <h1>Fetingames</h1>
+  <div class="nav">
+    <a href="themain.html">The Main</a>
+    <a href="themine.html" class="the-mine">The Mine</a>
+  </div>
+  <h2>Кликер - Скачать игру</h2>
+  <div class="download-btn">
+    <a href="https://example.com/download" target="_blank">Скачать Кликер</a>
+  </div>
 </div>
-
-<script>
-  let count = 0;
-  const counterDisplay = document.getElementById('counter');
-  const button = document.getElementById('clickBtn');
-
-  button.addEventListener('click', () => {
-    count++;
-    counterDisplay.textContent = count;
-  });
-</script>
 
 </body>
 </html>
