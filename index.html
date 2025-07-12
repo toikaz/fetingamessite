@@ -18,7 +18,7 @@
 
   /* Полупрозрачное окно */
   .overlay {
-    background-color: rgba(20, 20, 20, 0.8); /* тёмно-серый прозрачный фон */
+    background-color: rgba(20, 20, 20, 0.8);
     padding: 30px;
     max-width: 1200px;
     margin: 0 auto;
@@ -26,14 +26,19 @@
     border-radius: 10px;
   }
 
-  /* Заголовок */
+  /* Заголовок и надписи */
   header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 20px 20px 10px 20px;
+  }
+
+  /* Верхняя строка: название + ссылка */
+  .title-line {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 15px; /* расстояние между элементами */
+    gap: 15px;
   }
 
   h1 {
@@ -42,20 +47,16 @@
     letter-spacing: 2px;
   }
 
-  /* Надпись "The Main" и ссылка рядом */
-  .title-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-
+  /* "The Main" и ссылка "ANTIHYPE:clicker" */
   h2 {
     font-size: 24px;
     margin: 0;
     font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
-  /* Стиль для ссылки "ANTIHYPE:clicker" */
   .antihype-link {
     font-size: 16px;
     padding: 5px 10px;
@@ -65,31 +66,24 @@
     border-radius: 5px;
     transition: background-color 0.3s;
   }
-
   .antihype-link:hover {
     background-color: #ff3a1f;
   }
 
-  /* Черточка */
+  /* Линия под заголовком */
   hr {
     width: 80px;
     border: 2px solid #ffffff;
-    margin: 10px auto;
+    margin: 10px 0;
     border-radius: 2px;
   }
 
-  /* Название игры */
-  h2 {
-    font-size: 24px;
-    margin: 10px 0 30px 0;
-    font-weight: normal;
-  }
-
-  /* Основной блок с рекомендациями и скриншотами + кнопкой */
+  /* Основной контент */
   .content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 20px;
   }
 
   /* Блок рекомендаций */
@@ -108,7 +102,6 @@
     padding-bottom: 5px;
   }
 
-  /* Список рекомендаций */
   ul {
     list-style-type: disc;
     padding-left: 20px;
@@ -163,7 +156,7 @@
     background-color: #ff3a1f;
   }
 
-  /* Адаптивность */
+  /* Адаптив */
   @media(max-width: 768px) {
     .content {
       flex-direction: column;
@@ -178,13 +171,16 @@
 
 <div class="overlay">
 <header>
-  <h1>Fetingames</h1>
-  <hr />
-  <div class="title-container">
+  <div class="title-line">
+    <h1>Fetingames</h1>
+    <!-- Можно добавить линию или разделитель -->
+  </div>
+  <div style="display:flex; align-items:center; justify-content:center; gap:15px; margin-top:10px;">
     <h2>The Main</h2>
     <!-- ссылка "ANTIHYPE:clicker" -->
     <a class="antihype-link" href="your-link-here.html" target="_blank">ANTIHYPE:clicker</a>
   </div>
+  <hr />
 </header>
 
 <div class="content">
